@@ -36,8 +36,13 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  modules: ['nuxt-basic-auth-module'],
+
+  basic: {
+    name: process.env.BASIC_NAME,
+    pass: process.env.BASIC_PASSWORD,
+    enabled: process.env.BASIC_ENABLED === 'true'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
